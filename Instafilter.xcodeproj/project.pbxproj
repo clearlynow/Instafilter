@@ -11,6 +11,8 @@
 		55BA3755291ECA4A009FFC65 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55BA3754291ECA4A009FFC65 /* ContentView.swift */; };
 		55BA3757291ECA4B009FFC65 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 55BA3756291ECA4B009FFC65 /* Assets.xcassets */; };
 		55BA375B291ECA4B009FFC65 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 55BA375A291ECA4B009FFC65 /* Preview Assets.xcassets */; };
+		55BA3762291ECEB6009FFC65 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55BA3761291ECEB6009FFC65 /* ImagePicker.swift */; };
+		55BA3764291EEB8E009FFC65 /* ImageSaver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55BA3763291EEB8E009FFC65 /* ImageSaver.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +22,8 @@
 		55BA3756291ECA4B009FFC65 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		55BA3758291ECA4B009FFC65 /* Instafilter.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Instafilter.entitlements; sourceTree = "<group>"; };
 		55BA375A291ECA4B009FFC65 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		55BA3761291ECEB6009FFC65 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
+		55BA3763291EEB8E009FFC65 /* ImageSaver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageSaver.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +58,8 @@
 			children = (
 				55BA3752291ECA4A009FFC65 /* InstafilterApp.swift */,
 				55BA3754291ECA4A009FFC65 /* ContentView.swift */,
+				55BA3763291EEB8E009FFC65 /* ImageSaver.swift */,
+				55BA3761291ECEB6009FFC65 /* ImagePicker.swift */,
 				55BA3756291ECA4B009FFC65 /* Assets.xcassets */,
 				55BA3758291ECA4B009FFC65 /* Instafilter.entitlements */,
 				55BA3759291ECA4B009FFC65 /* Preview Content */,
@@ -139,8 +145,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				55BA3762291ECEB6009FFC65 /* ImagePicker.swift in Sources */,
 				55BA3755291ECA4A009FFC65 /* ContentView.swift in Sources */,
 				55BA3753291ECA4A009FFC65 /* InstafilterApp.swift in Sources */,
+				55BA3764291EEB8E009FFC65 /* ImageSaver.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -269,6 +277,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "We want to save the filtered photo";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -287,7 +296,9 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.minimascientific.Instafilter;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -307,6 +318,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "We want to save the filtered photo";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -325,7 +337,9 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.minimascientific.Instafilter;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
